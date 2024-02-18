@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>测试代码</title>
+  </head>
+  <body></body>
+  <script type="module">
+    import { Storage } from "./dist/index.js";
+    // console.log(new Storage());
+    const storage = new Storage();
+    storage.set("key", "gggg", new Date().getTime() + 5000);
+    setInterval(() => {
+      console.log(storage.get("key"));
+    }, 500);
+  </script>
+</html>
